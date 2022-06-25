@@ -49,4 +49,10 @@ fun main() {
 
     println("$playerOne VS $playerTwo")
     println("${ gameBoardSize.joinToString(" X ") } board")
+
+    println((1..gameBoardSize[1]).joinToString(prefix = " ", separator = " "))
+    repeat(gameBoardSize[0]) {
+        println("|".repeat(gameBoardSize[1] + 1).chunked(1).joinToString(separator = " "))
+    }
+    println("=".repeat((gameBoardSize[1]) * 2 + 1))
 }
